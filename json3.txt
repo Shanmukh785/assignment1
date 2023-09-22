@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+    <title>JSONDemo4</title>
+
+</head>
+
+<body>
+
+    <script type="text/javascript">
+
+        student = {
+            id: 101, 
+            name:"shanmukh", 
+            course:"MERN Stack",
+            hobbies: ["Running", "Swimming", "Eating"]
+        };
+
+        document.write("Id: " + student.id + "<br/>");
+        document.write("Name: " + student.name + "<br/>");
+        document.write("Course: " + student.course + "<br/>");
+
+        document.write("<b><u>Hobbies</u></b>");
+        document.write("<ol>");
+        for (let i = 0; i < student.hobbies.length; i++) {
+            document.write("<li>" + student.hobbies[i] + "</li>");
+        }
+        document.write("</ol>");
+             
+        console.log(student);
+
+    </script>
+
+</body>
+
+</html>

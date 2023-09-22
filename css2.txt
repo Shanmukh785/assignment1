@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" crossorigin="anonymous"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu">
+    <script>
+        function validation() {
+            var person = document.getElementById("person").value;
+            var password = document.getElementById("password").value;
+            if (person == "HR-EMPLOYEE" && password =="123" ) {
+                window.location="/Webpage/Employee.html";
+            }
+            else if (person == "HR-PROFILE" && password =="123" ) {
+                window.location="/Webpage/Profile.html";
+            }
+            else if (person == "login" && password =="123" ) {
+                window.location="/Webpage/demo2.html";
+            }
+            else{
+                document.getElementById("wrong").innerHTML="You entered wrong password/loginId";
+            }
+        }
+</script>
+</head>
+<body>
+  <div style="width: 30%; margin-left:70px; margin-top: 50px;">
+    <h1>Login Page</h1>
+        <h6 id="wrong" style="color: red;"></h6>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input class="form-control" type="text" placeholder="Enter LoginId" id="person" />
+        </div> <br />
+        <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input class="form-control" type="password" placeholder="Enter Password" id="password" />
+        </div> <br />
+        <button class="btn btn-primary" onclick="validation()">Login</button> New User? <a
+            href="Register.html">SignUp</a>
+    </div>
+</body>
+</html>

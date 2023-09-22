@@ -1,0 +1,21 @@
+<html>
+  <head>
+  <title>page1</title>
+  </head>
+  <body bgcolor="grey" text="blue">
+   <center> 
+     <i>This is talent sprint</i>
+  </center> 
+  </body>
+</html>
+
+
+
+
+
+
+
+
+please check the output
+
+

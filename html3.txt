@@ -1,0 +1,51 @@
+<html >
+<head>
+    <title>Document</title>
+    <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      </style>
+</head>
+<body bgcolor="lightyellow" text="blue">
+   <center>
+    <table border="2">
+        <legend><b>StudentData</b></legend>
+        <thead>
+            <th>Student Id</th>
+            <th colspan="2">Student Name</th>
+            <th>Age</th>
+            <th>Department</th>
+        </thead>
+        <tbody>
+            <tr align="left">
+                <td >101</td>
+                <td>Sree</td>
+                <td>Harsha</td>
+                <td>22</td>
+                <td rowspan="3">Training</td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>MD</td>
+                <td>Pasha</td>
+                <td>65</td>
+            </tr>
+            <tr>
+                <td>103</td>
+                <td>Vamshi</td>
+                <td>Krishna</td>
+                <td>55</td>
+            </tr>
+        </tbody>
+    </table>   
+   </center>
+</body>
+</html>
+
+
+
+
+
+

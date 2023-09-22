@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for the layout */
+        body {
+            background-color: rgb(195, 190, 225);
+            margin: 0;
+            padding: 0; 
+        }
+        .navbar {
+            z-index: 2; /* Ensure the navbar is above the sidebar */
+            position: fixed; /* Make the navbar fixed */
+            top: 0; /* Attach it to the top of the viewport */
+            width: 100%; /* Make it span the entire width */
+        }
+        .container-main {
+            margin-top: 80px; /* Add margin to create space below the fixed navbar */
+        }
+        .sidebar {
+            position: fixed;
+            top: 55px;
+            left: 0;
+            height: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            width: 20%;
+            overflow-y: auto;
+            z-index: 1;
+        }
+        .content {
+            position: absolute;
+            left: 20%;
+            right: 0;
+            padding: 20px;
+        }
+        /* iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        } */
+        details {
+            cursor: pointer;
+        }
+        summary {
+            outline: none;
+            margin-left: 20px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        .sidebar details ul {
+            padding-left: 50px;
+        }
+        /* Add this CSS for entire demo block hover color change */
+        .sidebar ul li details:hover {
+            background-color: grey;
+        }
+      
+        .show-image-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .container{
+            margin:0px;
+            padding: 0px;
+        }
+        .nav-link{
+            float: left;
+         margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand " href="#" style="margin-left:30px ;">Shanmukh</a>
+            <ul class="navbar-nav ml-auto "style="margin-right:600px ;">
+                <li class="nav-item">
+                    <a class="nav-link" onclick="loadDemo1('/html.txt', '')" target="demo-iframe">HTML</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="loadDemo1('/css.txt', '')"  target="demo-iframe">CSS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" onclick="loadDemo1('/javaScript.txt', '')"  target="demo-iframe">JavaScript</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div class="container container-main mt-4">
+        <div class="row">
+           
+            <div class="col-lg-4 col-md-4">
+                <div class="sidebar">
+                    <details>
+                        <summary>HTML</summary>
+                        <ul>
+                            <li><a href="#" onclick="loadDemo('/html1.txt', '/Screenshot 2023-09-22 074519.png')">Demo 1</a></li>
+                            <li><a href="#" onclick="loadDemo('/html2.txt', '/Screenshot 2023-09-22 074801.png')">Demo 2</a></li>
+                            <li><a href="#" onclick="loadDemo('/html3.txt', '/Screenshot 2023-09-22 075005.png')">Demo 3</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>CSS</summary>
+                        <ul>
+                            <li><a href="#" onclick="loadDemo('css1.txt', '/Screenshot 2023-09-22 073439.png')">Demo 1</a></li>
+                            <li><a href="#" onclick="loadDemo('css2.txt', '/Screenshot 2023-09-22 074210.png')">Demo 2</a></li>
+                            <li><a href="#" onclick="loadDemo('/bootstrap.txt', '/Screenshot 2023-09-21 230327.png')">Demo 3</a></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>JavaScript</summary>
+                        <ul>
+                            <li><a href="#" onclick="loadDemo('/json3.txt', '/Screenshot 2023-09-21 223630.png')">Demo 1</a></li>
+                            <li><a href="#" onclick="loadDemo('/json4.txt', '/Screenshot 2023-09-21 223405.png')">Demo 2</a></li>
+                            <li><a href="#" onclick="loadDemo('/jsond5.txt', '/Screenshot 2023-09-21 215027.png')">Demo 3</a></li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+
+            <div class="col-lg-9 col-md-8">
+                <div class="content">
+                    <iframe id="demo-iframe" name="demo-iframe" src="welcome.html" frameborder="0" style="width: 1220px; height: 650px; margin-top: 20px; margin-left: 119px;padding-left: 40px; background-color: rgb(195, 190, 225);"></iframe>
+                    <h2 id="output"style="margin-left: 150px;"></h2>
+                    <iframe id="image-iframe" name="image-iframe" src="" frameborder="0" style="width: 900px; height: 600px; display: none;  margin-left: 150px;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+
+
+function loadDemo1(textUrl, imageUrl) {
+    document.getElementById("output").innerHTML="";
+          
+            document.getElementById("demo-iframe").src = textUrl;
+
+            document.getElementById("image-iframe").src = imageUrl;
+
+            document.getElementById("image-iframe").style.display = "block";
+        }
+
+
+
+        function loadDemo(textUrl, imageUrl) {
+            
+            document.getElementById("output").innerHTML="Output:";
+            document.getElementById("demo-iframe").src = textUrl;
+
+            document.getElementById("image-iframe").src = imageUrl;
+
+            document.getElementById("image-iframe").style.display = "block";
+        }
+    </script>
+</body>
+</html>

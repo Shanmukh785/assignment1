@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>JSONDemo1</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var id = 101;
+        var name = "Harsha";
+        var course = "MERN Stack";
+        var hobbies = ["Chatting", "Running", "Swimming"];
+        var address = {streetNo: 101, city:"Hyderabad", state:"Telangana"};
+
+        document.write("Id: " + id + "<br/>");
+        document.write("Name: " + name + "<br/>");
+        document.write("Course: " + course + "<br/><br/>");
+
+        document.write("<b><u>Address</u></b><br/>");
+        
+        document.write("StreetNo: " + address.streetNo + "<br/>");
+        document.write("City: " + address.city + "<br/>");
+        document.write("State: " + address.state + "<br/><br/>");
+
+
+        document.write("<b><u>Hobbies</u></b>");
+        document.write("<ul>");
+        for (var i = 0; i < hobbies.length; i++) {
+            document.write("<li>" + hobbies[i] + "</li>")
+        }
+        document.write("</ul><br/><br/>");
+
+        console.log("Id: " + id );
+        console.log("Name: " + name );
+        console.log("Course: " + course );   
+        console.log("Hobbies: " + hobbies);    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title>page1</title>
+</head>
+
+<body bgcolor="lightyellow" text="blue">
+  <center>
+    <h1>welcome to <i> talent sprint</i></h1>
+    <h2>welcome to talent sprint</h2>
+    <h3>welcome to talent sprint</h3>
+    <h4>welcome to talent sprint</h4>
+    <h5>welcome to talent sprint</h5>
+    <h6>welcome to talent sprint</h6>
+  </center>
+  <hr />
+  <b><u>
+      <h1>Courses</h1><u></b>
+  <ol>
+    <li>HTML</li>
+    <li>MERN</li>
+    <li>MEAN</li>
+  </ol>
+  
+  <b><u>
+
+      <h1>Hobbies</h1><u></b>
+
+  <Ul>
+    <li>Surfing Net </li>
+    <li>Trading</li>
+    <li>Watching animes</li>
+  </ul>
+  <p align="center">THIS IS MY <span style="color:red;">PROFILE<span></p>
+</body>
+
+</html>

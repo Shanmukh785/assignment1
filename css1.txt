@@ -1,0 +1,40 @@
+<html>
+<head>
+   <title>Document</title>
+    <style>
+.div1{
+    border: 4px solid rgb(250, 128, 114);
+    height: 100px;
+    text-align: center;
+ background-color:  rgb(250, 128, 114);
+}
+.div2{
+    border: 4px solid dodgerblue;
+    height: 100px;
+text-align: center;
+background-color: dodgerblue;
+}
+.div3{
+    border: 4px solid rgb(32, 204, 29);
+    height: 100px;
+    text-align: center;
+    background-color: rgb(32, 204, 29);
+}
+.align{
+    display: flex; 
+}   </style>
+</head>
+<body>
+    <div class="align">
+    <div class="div1">
+        <h1 class="color1">This is div</h1>
+    </div>
+    <div class="div2">
+        <h1 class="color2">This is div</h1>
+    </div>
+    <div class="div3">
+        <h1 class="color3">This is div</h1>
+    </div>
+</div>
+</body>
+</html>
